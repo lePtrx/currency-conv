@@ -20,8 +20,9 @@
 
 
 
-import requests
 import json
+
+import requests
 
 requests = requests.get('http://data.fixer.io/api/latest?access_key=64462d177fc6f5eddae277f0290382a3&symbols=USD,JPY,SGD,MYR,EUR')
 
@@ -41,36 +42,12 @@ print(SGD)
 print(MYR)
 print(EUR)
 
-<<<<<<< Updated upstream
-# User input of MYR
-amount = float(input("Enter your MYR: "))
-=======
->>>>>>> Stashed changes
-
 
 
 # print (conversionUSD)
 # print (conversionJPY)
 # print (conversionSGD)
 
-<<<<<<< Updated upstream
-currencyChoice = int(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
-
-# while:
-if currencyChoice == 1:
-    print(conversionUSD)
-elif currencyChoice == 2:
-    print(conversionJPY)
-elif currencyChoice == 3:
-    print(conversionSGD)
-else:
-    print("Please select the right choice.")
-
-
-
-
-
-=======
 #currencyChoice = int(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
 
 # choice = True
@@ -89,13 +66,15 @@ def startProgram():
 
     # User input of MYR
     print("This program converts MYR to USD, JPY or SGD!")
+    
+startProgram()
 
 runloop = 1
 
 while runloop == 1:
         
     # Starting the currency conversion program
-    startProgram()
+    
     amount = int(input("What's your MYR amount?: "))
 
     # Checking if the amount is of type int or float
@@ -110,7 +89,7 @@ while runloop == 1:
         conversionSGD = msiaRinggit * SGD
 
         def menu():
-            print("Please select your curreny:")
+            print("Please select your currency:")
             print()
             print("1.USD")
             print("2.JPY")
@@ -134,9 +113,9 @@ while runloop == 1:
                 startProgram()        
             elif currencyChoice == "5":
                 loop = 0
+                runloop = 0
                 print("\nProgramme closed.\n")
             else:
                 print("\nPlease select from the above option.\n")   
     else:
-        print("try again")
->>>>>>> Stashed changes
+        print("Try Again")
