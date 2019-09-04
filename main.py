@@ -39,7 +39,7 @@ print(USD)
 print(JPY)
 print(SGD)
 print(MYR)
-print(EUR)
+# print(EUR)
 
 # User input of MYR
 amount = float(input("Enter your MYR: "))
@@ -57,19 +57,36 @@ conversionSGD = msiaRinggit * SGD
 # print (conversionJPY)
 # print (conversionSGD)
 
-currencyChoice = int(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
+# currencyChoice = int(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
 
-# while:
-if currencyChoice == 1:
-    print(conversionUSD)
-elif currencyChoice == 2:
-    print(conversionJPY)
-elif currencyChoice == 3:
-    print(conversionSGD)
-else:
-    print("Please select the right choice.")
+def looping():
+    # currencyChoice = str(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
+
+    test = 0
 
 
+    while test != "4":
+        currencyChoice = str(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
+
+
+        if currencyChoice == "1":
+            print(conversionUSD)
+            return currencyChoice
+        elif currencyChoice == "2":
+            print(conversionJPY)
+            return currencyChoice
+        elif currencyChoice == "3":
+            print(conversionSGD)
+            return currencyChoice
+        else: 
+            test == "4"
+            print("Please select the right choice.")
+            looping()
+            return test
+
+
+
+looping()
 
 
 
