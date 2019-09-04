@@ -16,7 +16,27 @@
 
 
 
+
+
+
+
 import requests
 import json
 
-requests = requests.get('http://data.fixer.io/api/latest?access_key=64462d177fc6f5eddae277f0290382a3&symbols=USD,JPY,SGD')
+requests = requests.get('http://data.fixer.io/api/latest?access_key=64462d177fc6f5eddae277f0290382a3&symbols=USD,JPY,SGD,MYR,EUR')
+
+# print(requests.json())
+
+data = requests.json()
+
+USD = data['rates']['USD']
+JPY = data['rates']['JPY']
+SGD = data['rates']['SGD']
+MYR = data['rates']['MYR']
+EUR = data['rates']['EUR']
+
+print(USD)
+print(JPY)
+print(SGD)
+print(MYR)
+print(EUR)
