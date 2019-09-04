@@ -40,3 +40,36 @@ print(JPY)
 print(SGD)
 print(MYR)
 print(EUR)
+
+# User input of MYR
+amount = float(input("Enter your MYR: "))
+
+# from MYR to EUR as a base
+msiaRinggit = amount / MYR
+
+# conversion formulas
+conversionUSD = msiaRinggit * USD
+conversionJPY = msiaRinggit * JPY
+conversionSGD = msiaRinggit * SGD
+
+
+# print (conversionUSD)
+# print (conversionJPY)
+# print (conversionSGD)
+
+currencyChoice = int(input("Select your currency:\n1.USD\n2.JPY\n3.SGD\n"))
+
+# while:
+if currencyChoice == 1:
+    print(conversionUSD)
+elif currencyChoice == 2:
+    print(conversionJPY)
+elif currencyChoice == 3:
+    print(conversionSGD)
+else:
+    print("Please select the right choice.")
+
+
+
+
+
