@@ -18,7 +18,7 @@ Build a simple terminal currency converter from Malaysian Ringgit (MYR) to 3 for
 # Importing libraries and modules
 import json
 import requests
-
+committing completed front end to master #2
 # To get data from finance API
 requests = requests.get('http://data.fixer.io/api/latest?access_key=64462d177fc6f5eddae277f0290382a3&symbols=USD,JPY,SGD,MYR,EUR')
 

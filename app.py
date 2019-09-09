@@ -1,10 +1,12 @@
-from flask import Flask, escape, request
+from flask import Flask, escape, request, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
+
 def index():
-   return render_template('index.html')
+   return render_template("index.html")
+   # return "hellow world"
 
 if __name__ == '__main__':
    app.run(debug = True)
