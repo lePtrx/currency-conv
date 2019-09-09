@@ -42,15 +42,16 @@ EUR = data['rates']['EUR']
 # print(EUR)
 
 # User input of MYR
-amount = float(input("Please key in your MYR to convert: "))
+
+# amount = float(input("Please key in your MYR to convert: "))
 
 # from MYR to EUR as a base
-msiaRinggit = amount / MYR
+# msiaRinggit = amount / MYR
 
 # conversion formulas
-conversionUSD = msiaRinggit * USD
-conversionJPY = msiaRinggit * JPY
-conversionSGD = msiaRinggit * SGD
+# conversionUSD = msiaRinggit * USD
+# conversionJPY = msiaRinggit * JPY
+# conversionSGD = msiaRinggit * SGD
 
 
 # print (conversionUSD)
@@ -72,27 +73,51 @@ conversionSGD = msiaRinggit * SGD
 #     print("Please select the right choice.")
 
 def menu():
-    print("Please select your curreny:")
+    print("Welcome to project9you! Please select option (1) to key in your MYR amount before selecting the other options:")
     print()
-    print("1.USD")
-    print("2.JPY")
-    print("3.SGD")
-    print("4.Quit")
+    print("1.Insert MYR amount.")
+    print("2.Convert to USD")
+    print("3.Convert to JPY")
+    print("4.Convert to SGD")
+    print("5.Quit")
+    print()
 
 loop = 1
 
 while loop == 1:
     menu()
-    currencyChoice = str(input("Your choice? "))
-    if currencyChoice == "1":
-        print(conversionUSD)
-    elif currencyChoice == "2":
-        print(conversionJPY)
-    elif currencyChoice == "3":
-        print(conversionSGD)
-    elif currencyChoice == "4":
+    userChoice = str(input("What would you like to do? "))
+    if userChoice == "1":
+        print()
+        amount = float(input("MYR to convert: "))
+        msiaRinggit = amount / MYR
+        print()
+        print (amount,"MYR")
+        print()
+    elif userChoice == "2":
+        conversionUSD = msiaRinggit * USD
+        print()
+        print (amount,"MYR")
+        print ("=")
+        print(conversionUSD,"USD")
+        print()
+    elif userChoice == "3":
+        conversionJPY = msiaRinggit * JPY
+        print()
+        print (amount,"MYR")
+        print ("=")
+        print(conversionJPY,"JPY")
+        print()
+    elif userChoice == "4":
+        conversionSGD = msiaRinggit * SGD
+        print()
+        print (amount,"MYR")
+        print ("=")
+        print(conversionSGD,"SGD")
+        print()
+    elif userChoice == "5":
         loop = 0
-        print("\nProgramme closed.\n")
+        print("\nThank you for using project9you, hope to see 9 you again!")
     else:
         print("\nPlease select from the above option.\n")   
 
