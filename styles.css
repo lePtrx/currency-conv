@@ -1,0 +1,25 @@
+p {
+margin-top: 30px;
+margin-bottom: 1rem;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+
+#result {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+    width: 500px;
+    height: 150px;
+}
+
+#anything {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    resize: none;
+}
+/* #form {
+    width: 150px;
+    height: 50px;
+} */
