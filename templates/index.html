@@ -20,7 +20,7 @@
 <h6 style= "text-align:center;">This program converts MYR to USD, JPY or SGD!</h6>
 <p style= "text-align:center;">What's your MYR amount?</p>
 
-<form>
+<form action="/convert" method="POST">
   <div class="form-row justify-content-center">
     <div class="col-3">
       <input type="text" class="form-control" placeholder="RM">
@@ -33,13 +33,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm text-center">
-      <button type="button" class="btn btn-light btn-lg btn-block">US Dollar (USD)</button>
+      <button type="button" class="btn btn-light btn-lg btn-block" id="usd">US Dollar (USD)</button>
     </div>
     <div class="col-sm text-center">
-      <button type="button" class="btn btn-light btn-lg btn-block">Japanese Yen (JPY)</button>
+      <button type="button" class="btn btn-light btn-lg btn-block" id="jpy">Japanese Yen (JPY)</button>
     </div>
     <div class="col-sm text-center">
-      <button type="button" class="btn btn-light btn-lg btn-block">Singapore Dollar (SGD)</button>
+      <button type="button" class="btn btn-light btn-lg btn-block" id="sgd">Singapore Dollar (SGD)</button>
     </div>
   </div>
 </div>
