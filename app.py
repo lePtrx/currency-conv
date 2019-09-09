@@ -6,7 +6,20 @@ app = Flask(__name__)
 
 def index():
    return render_template("index.html")
-   # return "hellow world"
+
+@app.route('/convert', methods=['GET', 'POST'])
+
+def form():
+   if request.method == 'POST':
+      currency = request.form.get('amount')
+      print(type(currency))
+      abc = str(currency)
+      print(abc + "stringhereeeee")
+      print(type(abc))
+      # print(currency)
+      # return currency
+
+
 
 if __name__ == '__main__':
    app.run(debug = True)
