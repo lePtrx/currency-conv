@@ -19,7 +19,7 @@ A simple currency converter project
 
    Windows
    ```sh
-    windows user pls tulis sini
+   .\env\Scripts\activate 
    ```
 
 2. package dependencies (pip requirements)
@@ -35,3 +35,10 @@ A simple currency converter project
    ```
 
 (On Windows you need to use set instead of export.)
+
+In the event that the above doesn't work for Windows' users, try the following with Powershell
+
+   ```sh
+   $ env:FLASK_ENV = "development"
+   flask run
+   ```
