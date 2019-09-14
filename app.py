@@ -2,7 +2,7 @@ from flask import Flask, escape, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 
 def index():
    return render_template("index.html")
@@ -11,13 +11,16 @@ def index():
 
 def form():
    if request.method == 'POST':
-      currency = request.form.get('amount')
-      print(type(currency))
-      abc = str(currency)
+      amount = request.form['amount']
+      print(type(amount))
+      abc = str(amount)
       print(abc + "stringhereeeee")
       print(type(abc))
-      # print(currency)
-      # return currency
+      print(currency)
+      return ''' 
+      <h1> the value is: {amount}</h1>
+      
+      '''
 
 
 
